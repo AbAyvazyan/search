@@ -1,0 +1,143 @@
+/* App Layout */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.app-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 32px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.app-title {
+  color: #1e293b;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app-subtitle {
+  color: #64748b;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app-main {
+  flex: 1;
+  padding: 48px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.search-section {
+  margin-bottom: 48px;
+}
+
+.app-footer {
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  padding: 24px 0;
+  margin-top: auto;
+}
+
+.footer-text {
+  color: #64748b;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 24px 0;
+  }
+
+  .app-title {
+    font-size: 36px;
+  }
+
+  .app-subtitle {
+    font-size: 16px;
+  }
+
+  .app-main {
+    padding: 32px 16px;
+  }
+
+  .search-section {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-title {
+    font-size: 28px;
+  }
+
+  .app-subtitle {
+    font-size: 14px;
+  }
+
+  .app-main {
+    padding: 24px 12px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .app {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  }
+
+  .app-header {
+    background: #1e293b;
+    border-bottom-color: #334155;
+  }
+
+  .app-title {
+    color: #f1f5f9;
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .app-subtitle {
+    color: #94a3b8;
+  }
+
+  .app-footer {
+    background: #0f172a;
+    border-top-color: #334155;
+  }
+
+  .footer-text {
+    color: #94a3b8;
+  }
+}

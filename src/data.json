@@ -1,0 +1,228 @@
+{
+  "searchResults": [
+    {
+      "id": "1",
+      "title": "React - A JavaScript library for building user interfaces",
+      "description": "React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called components.",
+      "category": "Frontend",
+      "tags": ["react", "javascript", "ui", "components", "frontend"],
+      "url": "https://react.dev",
+      "author": "Meta",
+      "date": "2023-12-01"
+    },
+    {
+      "id": "2",
+      "title": "TypeScript - JavaScript with syntax for types",
+      "description": "TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale. TypeScript adds optional static type checking to JavaScript.",
+      "category": "Programming",
+      "tags": ["typescript", "javascript", "types", "programming", "microsoft"],
+      "url": "https://www.typescriptlang.org",
+      "author": "Microsoft",
+      "date": "2023-11-15"
+    },
+    {
+      "id": "3",
+      "title": "Vite - Next Generation Frontend Tooling",
+      "description": "Vite is a build tool that aims to provide a faster and leaner development experience for modern web projects. It consists of a dev server and a build command.",
+      "category": "Build Tools",
+      "tags": ["vite", "build", "dev-server", "frontend", "fast"],
+      "url": "https://vitejs.dev",
+      "author": "Evan You",
+      "date": "2023-10-20"
+    },
+    {
+      "id": "4",
+      "title": "Node.js - JavaScript runtime built on Chrome's V8 engine",
+      "description": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.",
+      "category": "Backend",
+      "tags": ["nodejs", "javascript", "backend", "server", "runtime"],
+      "url": "https://nodejs.org",
+      "author": "Node.js Foundation",
+      "date": "2023-09-10"
+    },
+    {
+      "id": "5",
+      "title": "CSS Grid - A two-dimensional layout system",
+      "description": "CSS Grid Layout is a two-dimensional grid-based layout system that makes it easy to design complex layouts. It's perfect for creating responsive web designs.",
+      "category": "CSS",
+      "tags": ["css", "grid", "layout", "responsive", "design"],
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout",
+      "author": "Mozilla",
+      "date": "2023-08-25"
+    },
+    {
+      "id": "6",
+      "title": "JavaScript ES6+ Features and Modern Syntax",
+      "description": "Explore the latest features in JavaScript including arrow functions, destructuring, template literals, async/await, and more modern syntax improvements.",
+      "category": "Programming",
+      "tags": ["javascript", "es6", "modern", "syntax", "features"],
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "author": "Mozilla",
+      "date": "2023-07-30"
+    },
+    {
+      "id": "7",
+      "title": "Webpack - Module Bundler for Modern JavaScript Applications",
+      "description": "Webpack is a static module bundler for modern JavaScript applications. It creates a dependency graph and bundles all modules into one or more bundles.",
+      "category": "Build Tools",
+      "tags": ["webpack", "bundler", "modules", "javascript", "build"],
+      "url": "https://webpack.js.org",
+      "author": "Webpack Team",
+      "date": "2023-06-15"
+    },
+    {
+      "id": "8",
+      "title": "Git - Distributed Version Control System",
+      "description": "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.",
+      "category": "Version Control",
+      "tags": [
+        "git",
+        "version-control",
+        "github",
+        "collaboration",
+        "open-source"
+      ],
+      "url": "https://git-scm.com",
+      "author": "Linus Torvalds",
+      "date": "2023-05-20"
+    },
+    {
+      "id": "9",
+      "title": "Docker - Containerization Platform",
+      "description": "Docker is a platform for developing, shipping, and running applications using containerization. It allows you to package applications with all dependencies.",
+      "category": "DevOps",
+      "tags": ["docker", "containers", "devops", "deployment", "microservices"],
+      "url": "https://www.docker.com",
+      "author": "Docker Inc.",
+      "date": "2023-04-10"
+    },
+    {
+      "id": "10",
+      "title": "REST API Design Principles and Best Practices",
+      "description": "Learn how to design RESTful APIs that are scalable, maintainable, and follow industry best practices. Includes examples and common patterns.",
+      "category": "Backend",
+      "tags": ["rest", "api", "design", "backend", "best-practices"],
+      "url": "https://restfulapi.net",
+      "author": "REST API Community",
+      "date": "2023-03-15"
+    },
+    {
+      "id": "11",
+      "title": "GraphQL - Query Language for APIs",
+      "description": "GraphQL is a query language for APIs and a runtime for executing queries with existing data. It provides a complete description of the data in your API.",
+      "category": "Backend",
+      "tags": ["graphql", "api", "query", "facebook", "data-fetching"],
+      "url": "https://graphql.org",
+      "author": "Facebook",
+      "date": "2023-02-28"
+    },
+    {
+      "id": "12",
+      "title": "Progressive Web Apps (PWA) Development Guide",
+      "description": "Learn how to build Progressive Web Apps that provide a native app-like experience using web technologies. Includes service workers, offline functionality, and more.",
+      "category": "Frontend",
+      "tags": ["pwa", "progressive", "web-app", "offline", "mobile"],
+      "url": "https://web.dev/progressive-web-apps",
+      "author": "Google",
+      "date": "2023-01-20"
+    },
+    {
+      "id": "13",
+      "title": "Microservices Architecture Patterns",
+      "description": "Explore microservices architecture patterns, benefits, challenges, and implementation strategies for building scalable distributed systems.",
+      "category": "Architecture",
+      "tags": [
+        "microservices",
+        "architecture",
+        "distributed",
+        "scalable",
+        "patterns"
+      ],
+      "url": "https://microservices.io",
+      "author": "Chris Richardson",
+      "date": "2022-12-10"
+    },
+    {
+      "id": "14",
+      "title": "Machine Learning with Python",
+      "description": "Comprehensive guide to machine learning using Python, including data preprocessing, model training, evaluation, and deployment strategies.",
+      "category": "Data Science",
+      "tags": [
+        "machine-learning",
+        "python",
+        "ai",
+        "data-science",
+        "tensorflow"
+      ],
+      "url": "https://scikit-learn.org",
+      "author": "Scikit-learn Team",
+      "date": "2022-11-05"
+    },
+    {
+      "id": "15",
+      "title": "Cloud Computing with AWS",
+      "description": "Learn Amazon Web Services (AWS) cloud computing platform, including EC2, S3, Lambda, and other essential services for building scalable applications.",
+      "category": "Cloud",
+      "tags": ["aws", "cloud", "amazon", "infrastructure", "scalable"],
+      "url": "https://aws.amazon.com",
+      "author": "Amazon",
+      "date": "2022-10-15"
+    },
+    {
+      "id": "16",
+      "title": "Database Design and Optimization",
+      "description": "Best practices for database design, indexing strategies, query optimization, and performance tuning for both SQL and NoSQL databases.",
+      "category": "Database",
+      "tags": ["database", "sql", "optimization", "performance", "design"],
+      "url": "https://www.postgresql.org",
+      "author": "PostgreSQL Community",
+      "date": "2022-09-20"
+    },
+    {
+      "id": "17",
+      "title": "Cybersecurity Fundamentals",
+      "description": "Essential cybersecurity concepts, threat modeling, secure coding practices, and how to protect applications from common vulnerabilities.",
+      "category": "Security",
+      "tags": [
+        "security",
+        "cybersecurity",
+        "vulnerabilities",
+        "protection",
+        "best-practices"
+      ],
+      "url": "https://owasp.org",
+      "author": "OWASP Foundation",
+      "date": "2022-08-30"
+    },
+    {
+      "id": "18",
+      "title": "Mobile App Development with React Native",
+      "description": "Build cross-platform mobile applications using React Native. Learn about components, navigation, state management, and platform-specific features.",
+      "category": "Mobile",
+      "tags": ["react-native", "mobile", "cross-platform", "ios", "android"],
+      "url": "https://reactnative.dev",
+      "author": "Meta",
+      "date": "2022-07-25"
+    },
+    {
+      "id": "19",
+      "title": "DevOps and CI/CD Pipeline Implementation",
+      "description": "Learn DevOps practices, continuous integration and deployment, infrastructure as code, monitoring, and automation strategies.",
+      "category": "DevOps",
+      "tags": ["devops", "ci-cd", "automation", "deployment", "monitoring"],
+      "url": "https://jenkins.io",
+      "author": "Jenkins Community",
+      "date": "2022-06-15"
+    },
+    {
+      "id": "20",
+      "title": "UI/UX Design Principles for Developers",
+      "description": "Essential UI/UX design principles that every developer should know. Learn about user research, wireframing, prototyping, and design systems.",
+      "category": "Design",
+      "tags": ["ui", "ux", "design", "user-experience", "interface"],
+      "url": "https://www.figma.com",
+      "author": "Figma",
+      "date": "2022-05-10"
+    }
+  ]
+}
