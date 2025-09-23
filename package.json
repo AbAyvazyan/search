@@ -10,7 +10,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "type-check": "tsc --noEmit",
+    "type-check": "tsc --project tsconfig.app.json --noEmit",
     "prepare": "husky",
     "pre-commit": "lint-staged",
     "preview": "vite preview"
@@ -42,9 +42,6 @@
     ],
     "*.{json,css,md}": [
       "prettier --write"
-    ],
-    "*.{ts,tsx}": [
-      "npm run type-check"
     ]
   }
 }

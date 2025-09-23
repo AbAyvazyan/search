@@ -3,6 +3,15 @@
 
 echo "🔍 Running pre-commit checks..."
 
+# Run type checking first
+echo "🔍 Running TypeScript type checking..."
+npm run type-check
+
+if [ $? -ne 0 ]; then
+  echo "❌ Type checking failed. Please fix the errors before committing."
+  exit 1
+fi
+
 # Run lint-staged
 npm run pre-commit
 
