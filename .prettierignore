@@ -1,0 +1,17 @@
+node_modules/
+dist/
+build/
+.next/
+.nuxt/
+.vuepress/dist/
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+coverage/
+.nyc_output/
+.cache/
+.parcel-cache/
+*.log
+.DS_Store
+*.tsbuildinfo
