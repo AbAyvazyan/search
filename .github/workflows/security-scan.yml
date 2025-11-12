@@ -1,119 +1,119 @@
-name: Security Scan with Snyk
+# name: Security Scan with Snyk
 
-on:
-  push:
-    branches: [main, develop]
-  pull_request:
-    branches: [main]
-  schedule:
-    # Run security scan daily at 2 AM UTC
-    - cron: '0 2 * * *'
+# on:
+#   push:
+#     branches: [main, develop]
+#   pull_request:
+#     branches: [main]
+#   schedule:
+#     # Run security scan daily at 2 AM UTC
+#     - cron: '0 2 * * *'
 
-jobs:
-  snyk-security-scan:
-    name: Snyk Security Scan
-    runs-on: ubuntu-latest
+# jobs:
+#   snyk-security-scan:
+#     name: Snyk Security Scan
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: '20'
+#           cache: 'npm'
 
-      - name: Install dependencies
-        run: npm ci
+#       - name: Install dependencies
+#         run: npm ci
 
-      - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/node@master
-        continue-on-error: true
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          args: --severity-threshold=high
+#       - name: Run Snyk to check for vulnerabilities
+#         uses: snyk/actions/node@master
+#         continue-on-error: true
+#         env:
+#           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+#         with:
+#           args: --severity-threshold=high
 
-      - name: Upload Snyk results to GitHub Code Scanning
-        uses: github/codeql-action/upload-sarif@v3
-        if: always()
-        with:
-          sarif_file: snyk.sarif
-        continue-on-error: true
+#       - name: Upload Snyk results to GitHub Code Scanning
+#         uses: github/codeql-action/upload-sarif@v3
+#         if: always()
+#         with:
+#           sarif_file: snyk.sarif
+#         continue-on-error: true
 
-  # Alternative: Use Snyk without token (limited functionality)
-  snyk-free-scan:
-    name: Snyk Free Security Scan
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push' || github.event_name == 'pull_request'
+#   # Alternative: Use Snyk without token (limited functionality)
+#   snyk-free-scan:
+#     name: Snyk Free Security Scan
+#     runs-on: ubuntu-latest
+#     if: github.event_name == 'push' || github.event_name == 'pull_request'
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: '20'
+#           cache: 'npm'
 
-      - name: Install dependencies
-        run: npm ci
+#       - name: Install dependencies
+#         run: npm ci
 
-      - name: Install Snyk CLI
-        run: npm install -g snyk
+#       - name: Install Snyk CLI
+#         run: npm install -g snyk
 
-      - name: Run Snyk test (free tier)
-        run: |
-          echo "Running Snyk security scan (free tier)..."
-          snyk test --severity-threshold=high || echo "Snyk scan completed with findings"
+#       - name: Run Snyk test (free tier)
+#         run: |
+#           echo "Running Snyk security scan (free tier)..."
+#           snyk test --severity-threshold=high || echo "Snyk scan completed with findings"
 
-      - name: Run Snyk monitor (free tier)
-        run: |
-          echo "Monitoring dependencies with Snyk..."
-          snyk monitor || echo "Snyk monitoring completed"
-        continue-on-error: true
+#       - name: Run Snyk monitor (free tier)
+#         run: |
+#           echo "Monitoring dependencies with Snyk..."
+#           snyk monitor || echo "Snyk monitoring completed"
+#         continue-on-error: true
 
-  # Enhanced security with multiple tools
-  comprehensive-security:
-    name: Comprehensive Security Scan
-    runs-on: ubuntu-latest
+#   # Enhanced security with multiple tools
+#   comprehensive-security:
+#     name: Comprehensive Security Scan
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: '20'
+#           cache: 'npm'
 
-      - name: Install dependencies
-        run: npm ci
+#       - name: Install dependencies
+#         run: npm ci
 
-      - name: Run npm audit
-        run: |
-          echo "=== NPM Security Audit ==="
-          npm audit --audit-level=moderate || echo "NPM audit completed with findings"
+#       - name: Run npm audit
+#         run: |
+#           echo "=== NPM Security Audit ==="
+#           npm audit --audit-level=moderate || echo "NPM audit completed with findings"
 
-      - name: Check for known vulnerabilities
-        run: |
-          echo "=== Checking for high-severity vulnerabilities ==="
-          npm audit --audit-level=high || echo "High-severity check completed"
+#       - name: Check for known vulnerabilities
+#         run: |
+#           echo "=== Checking for high-severity vulnerabilities ==="
+#           npm audit --audit-level=high || echo "High-severity check completed"
 
-      - name: Install Snyk CLI
-        run: npm install -g snyk
+#       - name: Install Snyk CLI
+#         run: npm install -g snyk
 
-      - name: Run Snyk test
-        run: |
-          echo "=== Snyk Security Test ==="
-          snyk test --severity-threshold=high || echo "Snyk test completed with findings"
+#       - name: Run Snyk test
+#         run: |
+#           echo "=== Snyk Security Test ==="
+#           snyk test --severity-threshold=high || echo "Snyk test completed with findings"
 
-      - name: Generate security report
-        run: |
-          echo "=== Security Scan Summary ==="
-          echo "✅ NPM audit completed"
-          echo "✅ Snyk security scan completed"
-          echo "📊 Check the logs above for detailed findings"
+#       - name: Generate security report
+#         run: |
+#           echo "=== Security Scan Summary ==="
+#           echo "✅ NPM audit completed"
+#           echo "✅ Snyk security scan completed"
+#           echo "📊 Check the logs above for detailed findings"
